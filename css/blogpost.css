@@ -120,6 +120,13 @@ body{
     height:auto;
 
 }
+.author-img {
+    height: 100%;
+    min-height: 10vh;
+    max-height: 15vh;
+    border-radius: 100%;
+    margin: 0 1em;
+}
 
 .author-title-text {
     display: block;
