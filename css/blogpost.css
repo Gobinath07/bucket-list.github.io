@@ -1,0 +1,148 @@
+@import "shared/header.css";
+@import "shared/section-a.css";
+@import "shared/footer.css";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:18px;
+    padding:1em;
+    background-color: darkgray;
+}
+
+.header{
+    height:90%;
+    width: 100%;
+    background-image: url('../image/walk-across-the-great-wall-of-china-b09f.jpg');
+    background-size:cover;
+    background-position: bottom;
+    opacity: 10px;
+    
+    
+
+
+}
+
+.grid-main {
+    display: grid;
+    grid-template-rows: 80vh  max-content max-content min-content min-content;
+    grid-template-columns: 60% 40%;
+    grid-gap: 0.2rem;
+    grid-template-areas:
+        "header header"
+        "section-a sidebar"
+        "author-info author-info"
+        "section-b section-b"
+        "footer footer";
+}
+
+@media only screen and (max-width: 900px) {
+
+    .grid-main {
+        display: grid;
+        grid-template-rows: 80vh max-content min-content min-content max-content;
+        grid-template-columns: 100%;
+        grid-gap: 0.2rem;
+        grid-template-areas:
+            "header"
+            "section-a"
+             "sidebar"
+             "author-info"
+            "section-b"
+            "footer";
+    }
+
+}
+
+@media(max-width:350px) {
+
+    .grid-main {
+        display: grid;
+        grid-template-rows: 80vh 0 0 min-content min-content max-content;
+        grid-template-columns: 100%;
+        grid-gap: 0.2rem;
+        grid-template-areas:
+            "header"
+            "welcome-text"
+            "sidebar"
+            "section-b"
+            "author-info"
+        
+            "footer";
+    }
+}
+.grid-sidebar {
+    grid-area: sidebar;
+    align-self: center;
+    justify-self: center;
+    background-color:black;
+    color:white;
+
+    width:100%;
+    height:100%;
+
+}
+
+.sidebar {
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar .btn{
+    padding:10px;
+    background-color: red;
+    color: black;
+    width:100px;
+    margin-top: 10px;
+}
+
+.sidebar h2 {
+    margin-bottom: 1em;
+}
+
+@media (max-width: 600px) {
+    .grid-sidebar {
+        clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+    }
+}
+
+.grid-author-info {
+    grid-area: author-info;
+    background-color: #fff;
+    padding: 2em;
+    display: flex;
+    height:auto;
+
+}
+
+.author-title-text {
+    display: block;
+}
+.grid-blogpost {
+    margin-top: 0px;
+    grid-area: section-b;
+    background-color: black;
+    width: 75vw;
+    color: white;
+    margin: 1em auto;
+    padding: 2em;
+}
+
+.post-img {
+    width: 100%;
+}
+.quote {
+    background-color: silver;
+    border-radius: 1em;
+    color: black;
+    padding: 0.2em 0.5em;
+    margin-left: 1.2em;
+    margin-right: 0;
+    margin-bottom: 1em;
+}

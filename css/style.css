@@ -1,0 +1,122 @@
+@import "shared/header.css";
+@import "shared/section-a.css";
+@import "shared/footer.css";
+
+
+
+
+
+
+
+*{
+    margin:0;
+    padding:0;
+
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:18px;
+    padding:1em;
+    background-color:#eceff1;
+}
+
+.header{
+    height:100%;
+    width: 100%;
+    background-image: url('../image/back.jpg');
+    background-size:cover;
+    background-position: bottom;
+    
+    
+
+
+}
+
+.grid-main {
+    display: grid;
+    grid-template-rows: 88vh 34vh max-content 34vh;
+    grid-template-columns: 60% 40%;
+    grid-gap: 0.2rem;
+    grid-template-areas:
+        "header header"
+        "section-a section-a"
+        "section-b section-b"
+        "footer footer";
+}
+
+@media only screen and (max-width: 900px) {
+
+    .grid-main {
+        display: grid;
+        grid-template-rows: 80vh min-content min-content 34vh;
+        grid-template-columns: 100%;
+        grid-gap: 0.2rem;
+        grid-template-areas:
+            "header"
+            "section-a"
+        
+            "section-b"
+            "footer";
+    }
+}
+#section-b {
+    grid-area: section-b;
+    display: flex;
+    flex-flow: wrap;
+    background-color:whitesmoke ;
+    justify-content: center;
+}
+#grid{
+
+        margin: 0 auto;
+        display: flex;
+        flex-flow: row wrap;
+        
+    
+
+}
+.card {
+    flex-basis: 28%;
+    flex-grow: 1;
+    margin: 1em;
+    padding: 1em;
+    color:white;
+    background-color:black;
+    border-radius: 0.5em;
+}
+
+.card_image{
+    width: 100%;
+    height:75%;
+}
+
+@media only screen and (max-width: 900px) {
+    .card {
+        flex-basis: 40%;
+    }
+    .btn:hover {
+        border:1px solid orange;
+        background-color: white;
+       }
+}
+.card .btn{
+
+background-color:orange;
+color: black;
+font-weight: 500;
+font-size: 10px;
+padding: 0.8em 2em;
+border-radius: 5px;
+margin-top: 10px;
+
+
+}
+
+.btn:hover {
+ border:1px solid orange;
+ background-color: white;
+}
+
+

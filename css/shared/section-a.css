@@ -1,0 +1,13 @@
+#section-a {
+    grid-area: section-a;
+    align-self: center;
+    justify-self: center;
+    background-color: mintcream;
+    color: black;
+}
+
+.content_wrap {
+    text-align: center;
+    margin: 2em;
+}
+

@@ -1,0 +1,14 @@
+.grid-footer {
+    grid-area: footer;
+ background-color: black;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    font-size: large;
+}
+
+footer {
+    margin-top: 2em;
+    text-align: center;
+}
